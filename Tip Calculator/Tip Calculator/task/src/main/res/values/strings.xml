@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tip calculator</string>
+    <plurals name="seats">
+        <item quantity="zero">No seats booked</item>
+        <item quantity="one">%d seat booked</item>
+        <item quantity="other">%d seats booked</item>
+    </plurals>
+</resources>

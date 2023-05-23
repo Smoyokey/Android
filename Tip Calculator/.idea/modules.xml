@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tip_Calculator.iml" filepath="$PROJECT_DIR$/.idea/modules/Tip_Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tip Calculator/task/Tip_Calculator.Tip_Calculator-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Tip Calculator/task/Tip_Calculator.Tip_Calculator-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tip Calculator/task/Tip_Calculator.Tip_Calculator-task.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/Tip Calculator/task/Tip_Calculator.Tip_Calculator-task.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tip Calculator/task/Tip_Calculator.Tip_Calculator-task.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Tip Calculator/task/Tip_Calculator.Tip_Calculator-task.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tip Calculator/task/Tip_Calculator.Tip_Calculator-task.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/Tip Calculator/task/Tip_Calculator.Tip_Calculator-task.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Plurals/Define plurals/Tip_Calculator.Topics-Plurals-Define_plurals.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Plurals/Define plurals/Tip_Calculator.Topics-Plurals-Define_plurals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Plurals/Plurals knowledge/Tip_Calculator.Topics-Plurals-Plurals_knowledge.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Plurals/Plurals knowledge/Tip_Calculator.Topics-Plurals-Plurals_knowledge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Plurals/Points scored/Tip_Calculator.Topics-Plurals-Points_scored.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Plurals/Points scored/Tip_Calculator.Topics-Plurals-Points_scored.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Plurals/Theory/Tip_Calculator.Topics-Plurals-Theory.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Plurals/Theory/Tip_Calculator.Topics-Plurals-Theory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Tip_Calculator.util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Tip_Calculator.util.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="D:\HyperSkill\Android\Tip Calculator\Tip Calculator\task"
+    name=":Tip_Calculator-task"
+    type="APP"
+    maven="Tip Calculator:Tip_Calculator-task:"
+    gradle="7.0.2"
+    buildFolder="build"
+    bootClassPath="C:\Java\platforms\android-29\android.jar;C:\Java\build-tools\30.0.2\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-29"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

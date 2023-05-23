@@ -1,0 +1,47 @@
+<h2>Plurals</h2>
+<p><strong>Plurals</strong>, also known as <strong>quantity strings</strong>, are string resources that carry alternate strings for pluralization. Imagine you want to display a text with the number of cakes ordered. The text may be: "2 cakes ordered", or "1 cake ordered". Note that the word "cake" changes depending on the quantity of the cakes. Plurals come in handy in this situation. Using them, you will be able to select the correct form of a string based on a quantity. </p>
+<p></p><div class="alert alert-primary"> Selecting the appropriate string depends on the grammar rules of the language you are using. Due to variations across different languages, plurals are uniquely handled in each of them. We'll discuss it more later in this topic. </div>
+<p>In this topic, you will learn how to use plurals in your Android apps to display a grammatically correct string in relation to quantity.</p>
+<h5 id="plural-resources">Plural resources</h5>
+<p>Plurals, being value resources, can be combined with other string resources in the <em>res/values/strings.xml </em>file. You can also create a separate XML file, provided that it is placed in the <em>res/values</em> directory. </p>
+<p>To create a plurals resource, you first declare an element with the tag <code class="language-xml">plurals</code>. The element contains a name attribute used to reference the resource. Inside the element there are several child elements with the tag <code class="language-xml">item</code>. Each <code class="language-xml">item</code> element has a quantity attribute that takes in a specific set of keywords used to link it to a quantity class.</p>
+<p>Here is an example of the implementation of a plurals resource for our earlier example with cakes:</p>
+<pre><code class="language-xml">&lt;resources&gt;
+    &lt;plurals name="numberOfCakesOrdered"&gt;
+        &lt;item quantity="one"&gt;%d cake ordered&lt;/item&gt;
+        &lt;item quantity="other"&gt;%d cakes ordered&lt;/item&gt;
+    &lt;/plurals&gt;
+&lt;/resources&gt;</code></pre>
+<p>Note that, as with other resources, plurals should also be enclosed with the root element <code class="language-xml">&lt;resources&gt;</code>.</p>
+<h5 id="the-quantity-attribute">The quantity attribute</h5>
+<p>The example above is a simple singular and plural case in English. The quantity <code class="language-xml">one</code> represents a singular case where the quantity is of the value 1. <code class="language-xml">other</code> represents the plural case where the quantity is any other value (including 0) except 1.</p>
+<p>The case above only applies to English and some other languages with the same grammatical rules of pluralization. Other languages play by different rules; that's why Android supports more class quantities. The complete list supported by Android is <code class="language-xml">zero</code>, <code class="language-xml">one</code>, <code class="language-xml">two</code>, <code class="language-xml">few</code>, <code class="language-xml">many</code>, and <code class="language-xml">other</code>.</p>
+<p>The selection of the appropriate string is completely based on the grammatical rules of the associated language. For instance, in English, Spanish, and other languages that have similar grammatical rules, <code class="language-xml">zero</code> is ignored. That is because, grammatically, the quantity of 0 is treated the same way as other quantities except 1. For example: "0 contacts found", "1 contact found", and "2 contacts found".</p>
+<p>Other languages have different rules:</p>
+<ul>
+<li>In Chinese and Korean, only <code class="language-xml">other</code> is used since the grammar of sentences is not affected by the quantity.</li>
+<li>In Russian, <code class="language-xml">one</code> represents not only the quantity of 1 but also 21, 31, 41, 51, 61, and so on. Basically, any number ending with 1 with the exception of those ending with 11. For example: "1 контакт", "21 контакт". <code class="language-xml">few</code>, <code class="language-xml">many</code>, and <code class="language-xml">other</code> are also used in Russian.</li>
+<li>In Irish, all class quantities are used except for <code class="language-xml">zero</code>. <code class="language-xml">one</code> is used for the quantity of 1, <code class="language-xml">two</code> used for the quantity of 2, which in Irish is given special treatment, <code class="language-xml">few</code> is used for a range of quantities (3~6), <code class="language-xml">many</code> (7~10), and <code class="language-xml">other</code> for the remaining quantities including 0.</li>
+<li>Other languages such as Arabic treat the quantity of 0 differently from other quantities, so <code class="language-xml">zero</code> is used in their cases.</li>
+</ul>
+<p>Since we cannot exhaustively list every language and its grammatical rules, the rules Android mainly uses can be found here: <a href="https://www.unicode.org/cldr/cldr-aux/charts/25/supplemental/language_plural_rules.html" rel="noopener noreferrer nofollow" target="_blank">Language Plural Rules</a>.</p>
+<p></p><div class="alert alert-primary"> When using plurals, make sure that all possible outcomes for the specific language used are accounted for. </div>
+<h5 id="usage-in-code">Usage in code</h5>
+<p>Assume you have a plural resource in the <em>res/values/strings.xml</em> file:</p>
+<pre><code class="language-xml">&lt;plurals name="notification"&gt;
+    &lt;item quantity="one"&gt;You have %d notification&lt;/item&gt;
+    &lt;item quantity="other"&gt;You have %d notifications&lt;/item&gt;
+&lt;/plurals&gt;</code></pre>
+<p>You can access it by using the <code class="language-xml">getQuantityString()</code> method from the <code class="language-xml">Resources</code> class:</p>
+<pre><code class="language-kotlin">val newMessages = 5
+val notification = resources.getQuantityString(R.plurals.notification, newMessages, newMessages)</code></pre>
+<p>Plurals are referenced by the name provided in the name attribute of the <code class="language-xml">plurals</code> element. In the example above, to the variable <code class="language-xml">notification</code>, the string "You have 5 notifications" is assigned.</p>
+<p>Note that the variable <code class="language-xml">newMessages</code> is passed twice as the second and third arguments. The second argument is used to pick the correct plural string based on the value it holds (so it's required for the function to work), whereas the rest of the arguments are used for formatting (only in cases where string formatting is used as in our example above). </p>
+<h5 id="conclusion">Conclusion</h5>
+<p>Here is a brief summary of what you've learned in this topic:</p>
+<ul>
+<li>Plurals carry different strings for pluralization.</li>
+<li>They are simply value resources and can be mixed with other string resources or placed in their own XML file in the <em>res/values</em> directory.</li>
+<li>The correct plural string selection depends on the language in use since different languages have different grammar rules.</li>
+<li>Plurals can be accessed from code by using the <code class="language-xml">getQuantityString()</code> method, where the first argument is the plural resource ID, the second is used to select the correct plural string, and the following arguments are used for string formatting (if included).</li>
+</ul>

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\HyperSkill\\Android\\Secret Diary\\Secret Diary\\task\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "D:\\HyperSkill\\Android\\Secret Diary\\Secret Diary\\task\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "D:\\HyperSkill\\Android\\Secret Diary\\Secret Diary\\task\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\HyperSkill\\Android\\Secret Diary\\Secret Diary\\task\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]

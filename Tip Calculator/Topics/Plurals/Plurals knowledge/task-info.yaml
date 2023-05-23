@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Plurals are placed in the <i>res/values</i> directory
+- text: Plurals carry different strings for pluralization
+- text: Plurals are accessed by the <code>getQuantityString()</code> method
+- text: The <code>&lt;plurals&gt;</code> element in plurals has an attribute named
+    <i>id</i>
+files:
+- name: src/main/Main.kt
+  visible: true
+  text: |+
+    // You can experiment here, it won’t be checked
+
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/23439#comment
+status: Solved
+record: -1
+local_check: false

@@ -1,0 +1,21 @@
+type: code
+files:
+- name: src/main/Main.kt
+  visible: true
+  text: |-
+    fun getScore(pointsScored: Int, totalPoints: Int): String {
+        // Write your code here!
+
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/23408#comment
+status: Solved
+feedback:
+  message: |-
+    <html>[+] Test #1. OK
+    [+] Test #2. OK
+    [+] Test #3. OK
+
+    3 of 3 test(s) passed.</html>
+  time: "Sun, 21 May 2023 17:05:54 UTC"
+record: -1

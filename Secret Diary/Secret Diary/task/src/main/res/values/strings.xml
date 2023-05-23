@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Secret Diary</string>
+    <string name="hintEdit">Dear Diary...</string>
+    <string name="save">Save</string>
+    <string name="undo">Undo</string>
+    <string name="title">Remove last note</string>
+    <string name="message">Do you really want to remove the last writing? This operation cannot be undone!</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="secret">Secret Diary</string>
+    <string name="log">Log in</string>
+    <string name="error">Wrong PIN</string>
+    <string name="enter">Enter PIN</string>
+</resources>

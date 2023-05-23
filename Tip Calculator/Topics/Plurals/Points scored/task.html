@@ -1,0 +1,16 @@
+<h2>Points scored</h2>
+<p></p>
+<p>Look at the values resources below:</p>
+<pre><code class="language-xml">&lt;resources&gt;
+    &lt;string name="students_score"&gt;You scored %1$s out of %2$d&lt;/string&gt;
+    &lt;plurals name="points"&gt;
+        &lt;item quantity="one"&gt;%d point&lt;/item&gt;
+        &lt;item quantity="other"&gt;%d points&lt;/item&gt;
+    &lt;/plurals&gt;
+&lt;/resources&gt;</code></pre>
+<p>Finish implementing the code so that the function <code class="language-xml">getScore()</code> returns a string containing the points scored by a student compared to the total of points. The points scored and total points are provided to the function as arguments. The format of the string for a student who scored 9 points out of 10 should be "You scored 9 points out of 10".</p>
+<p>Make use of the values resources provided above.</p>
+<p></p><div class="alert alert-primary"> You have access to the <code class="language-xml">Resources</code> class through <code class="language-xml">resources</code>. The <code class="language-xml">getString()</code> function is to be accessed as a method of <code class="language-xml">resources</code> </div><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">8 10</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">You scored 8 points out of 10</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 8 seconds</font><br><br>
+<b>Caution</b><br><br>
+You may see errors in your code or execution results due to missing context. Don’t worry about it, just write the solution and press Check.
+<br><br>
